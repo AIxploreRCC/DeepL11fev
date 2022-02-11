@@ -88,7 +88,7 @@ history = model.fit(
 
 tf.keras.models.save_model(model,'my_model2.hdf5')
 
-!pip install streamlit
+
 
 # Commented out IPython magic to ensure Python compatibility.
 # %%writefile app.py
