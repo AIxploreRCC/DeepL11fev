@@ -141,13 +141,3 @@ tf.keras.models.save_model(model,'my_model2.hdf5')
 #     .format(class_names[np.argmax(score)], 100 * np.max(score))
 # )
 
-!wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip
-
-!unzip ngrok-stable-linux-amd64.zip
-
-get_ipython().system_raw('./ngrok http 8501 &')
-
-!curl -s http://localhost:4040/api/tunnels | python3 -c \
-    'import sys, json; print("Execute the next cell and the go to the following URL: " +json.load(sys.stdin)["t
-
-!streamlit run /content/app.py
